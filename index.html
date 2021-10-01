@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Vue.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <title>Calculation App</title>
+</head>
+<body>
+  <div id="app" class="vh-100 d-flex justify-content-center align-items-center">
+    <div class="container bg-main border border-dark border-4 border-radius">
+      <div>
+        <div id="screen" class="m-2 p-2 bg-darkGray border-radius">
+          <div class="p-2">
+            <div class="ml-auto p-3 border-radius col-4 bg-dark"></div>
+          </div>
+          <div class="m-4 p-2 bg-white">
+            <p class="screen mb-0 py-3 px-2 text-right bg-main border-2 border-dark border">{{ calculate }}</p>
+          </div>
+          <div class="m-4 p-2 bg-white">
+            <p class="screen mb-0 py-3 px-2 text-right bg-main border-2 border-dark border">{{ answer }}</p>
+          </div>
+        </div>
+        <div id="button" class="px-md-5 pb-md-3 pt-md-1 d-flex flex-wrap">
+          <button class="btn box bg-whiteGray shadow-btn" @click="display">{{ button.seven }}</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="display">{{ button.eight }}</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="display">{{ button.nine }}</button>
+          <button class="btn box bg-coral shadow-btn" @click="deleteOne">{{ button.del }}</button>
+          <button class="btn box bg-coral shadow-btn" @click="deleteAll">{{ button.ac }}</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="display">{{ button.four }}</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="display">{{ button.five }}</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="display">{{ button.six }}</button>
+          <button class="btn box bg-darkGray shadow-btn" @click="display" v-bind:disabled="disabled">{{ button.multiple }}</button>
+          <button class="btn box bg-darkGray shadow-btn" @click="display" v-bind:disabled="disabled">{{ button.divide }}</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="display">{{ button.one }}</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="display">{{ button.two }}</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="display">{{ button.three }}</button>
+          <button class="btn box bg-darkGray shadow-btn" @click="display" v-bind:disabled="disabled">{{ button.add }}</button>
+          <button class="btn box bg-darkGray shadow-btn" @click="display" v-bind:disabled="disabled">{{ button.minus }}</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="display">{{ button.zero }}</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="display">{{ button.zero2 }}</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="display" v-bind:disabled="disabled">{{ button.dot }}</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="displayAnswer">Ans</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="doCalculate">=</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+</html>

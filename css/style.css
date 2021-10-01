@@ -1,0 +1,76 @@
+.d-flex .box {
+  width: calc((100% - 60px) / 5);
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding: 1rem 0;
+}
+
+.d-flex .box:nth-child(5n) {
+  margin-right: 0;
+}
+
+.bg-whiteGray {
+  background-color: white;
+  color: #303030;
+}
+
+.bg-whiteGray:hover {
+  color: #303030;
+}
+
+.bg-darkGray {
+  background-color: silver;
+  color: #303030;
+}
+
+.bg-darkGray:hover {
+  color: #303030;
+}
+
+.bg-coral {
+  background-color: lightcoral;
+  color: white;
+}
+
+.bg-coral:hover {
+  color: white;
+}
+
+.bg-main {
+  background-color: whitesmoke;
+}
+@media screen and (min-width:760px) {
+  .container {
+    max-width: 760px;
+  }
+  }
+
+.shadow-btn {
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+  transition: .4s;
+}
+
+.shadow-btn:hover {
+  box-shadow: 0 0 3px rgba(0,0,0,0);
+  transition: .4s;
+}
+
+.btn:focus {
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.border-2 {
+  border-width: 2px!important;
+}
+
+.border-4 {
+  border-width: 4px!important;
+}
+
+.border-radius {
+  border-radius: 10px;
+}
+
+.screen {
+  min-height: 60px;
+}
