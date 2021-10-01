@@ -8,6 +8,8 @@ ANSボタンは一つ目の計算の答えを利用することが出来ます�
 
 ## URL
 
+https://tomo1818.github.io/CalculationApp/
+
 ## 使用言語
 
 * HTML
