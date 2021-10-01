@@ -53,14 +53,21 @@ var calc = new Vue({
       this.answer = '';
       this.beforeAns = '';
     },
+    calc(num1, num2, operand) {
+      return String(operand === "×" ? Number(num1) * Number(num2) : Number(num1) / Number(num2));
+    },
     doCalculate: function() {
       let formula = this.calculate.split(" ");
       let result = Number(formula[0]);
+      for (let i = 1; i < formula.length; i += 2) {
+        if (formula[i] === "×" || formula[i] === "÷") {
+          formula.splice(i - 1, 3, this.calc(formula[i - 1], formula[i + 1], formula[i]));
+        }
+      }
+      console.log(formula);
       for(let i = 1; i < formula.length; i += 2) {
         if (formula[i] === "+") result += Number(formula[i + 1]);
         else if (formula[i] === "-") result -= Number(formula[i + 1]);
-        else if (formula[i] === "×") result *= Number(formula[i + 1]);
-        else if (formula[i] === "÷") result /= Number(formula[i + 1]);
       }
       this.calculate = "";
       this.answer = result;
