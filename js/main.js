@@ -58,12 +58,12 @@ var calc = new Vue({
     },
     doCalculate: function() {
       let formula = this.calculate.split(" ");
-      let result = Number(formula[0]);
       for (let i = 1; i < formula.length; i += 2) {
         if (formula[i] === "×" || formula[i] === "÷") {
           formula.splice(i - 1, 3, this.calc(formula[i - 1], formula[i + 1], formula[i]));
         }
       }
+      let result = Number(formula[0]);
       console.log(formula);
       for(let i = 1; i < formula.length; i += 2) {
         if (formula[i] === "+") result += Number(formula[i + 1]);
