@@ -45,7 +45,7 @@
           <button class="btn box bg-darkGray shadow-btn" @click="display" v-bind:disabled="disabled">{{ button.add }}</button>
           <button class="btn box bg-darkGray shadow-btn" @click="display" v-bind:disabled="disabled">{{ button.minus }}</button>
           <button class="btn box bg-whiteGray shadow-btn" @click="display">{{ button.zero }}</button>
-          <button class="btn box bg-whiteGray shadow-btn" @click="display">{{ button.zero2 }}</button>
+          <button class="btn box bg-whiteGray shadow-btn" @click="display" v-bind:disabled="disabled">{{ button.zero2 }}</button>
           <button class="btn box bg-whiteGray shadow-btn" @click="display" v-bind:disabled="disabled">{{ button.dot }}</button>
           <button class="btn box bg-whiteGray shadow-btn" @click="displayAnswer">Ans</button>
           <button class="btn box bg-whiteGray shadow-btn" @click="doCalculate">=</button>
